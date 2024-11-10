@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin: 10px;
+    background: url('img/fondo.jpg') no-repeat center center fixed;
+    background-color: #000000;
+    background-size: cover;
+    color: #333;
+}
+
+.custom-line {
+    border: none;
+    height: 2px;
+    background-color: #000;
+    margin: 50px 0;
+    z-index: 1;
+}
+
+/* Headings */
+h1 {
+    color: #071c57;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+/* Container Styles */
+
+/* Container Styles */
+.titulo {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center;
+    align-items: center; /* Centra todos los elementos horizontalmente */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #b7b7b7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* Título */
+.titulo h1 {
+    color: #000000;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0;
+    text-align: center; /* Centra el título */
+}
+
+/* Contenedor para el título y la imagen */
+.titulo-contenedor {
+    display: flex;
+    justify-content: space-between; /* Coloca el título a la izquierda y la imagen a la derecha */
+    align-items: center; /* Alinea el título y la imagen en el centro verticalmente */
+    width: 100%;
+    margin-bottom: 10px; /* Añade espacio entre el título+imagen y el eslogan */
+}
+
+/* Estilo para la imagen */
+.titulo img {
+    width: 125px;
+    height: auto;
+    margin-left: 20px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilo para el eslogan */
+.titulo h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px; /* Añade separación con el título */
+}
+
+
+
+
+/* Flexbox container for 3 sections */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Left side section (productosYServicios) */
+.productosYServicios {
+    width: 65%; /* Ocupa el 65% del espacio */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Right side section (horariosDeAtencion, numerosDeTelefono) */
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+}
+
+/* Horarios de atención */
+.horariosDeAtencion, .numerosDeTelefono {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Link styling for better visibility */
+.numerosDeTelefono a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para el enlace de números de teléfono */
+.numerosDeTelefono a:hover {
+    color: #00ddff;
+}
+
+/* Circle image */
+.circle-image {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Make sure the link and interaction works for toggleContent */
+.productosYServicios h3 {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000000;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+h3.active + p {
+    display: block;
+}
+
+.productosYServicios p {
+    display: none; /* Hide paragraphs by default */
+}
+
+.productosYServicios h3.active + p {
+    display: block; /* Show the paragraph when the h3 is active */
+}
