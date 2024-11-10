@@ -86,6 +86,9 @@ body {
 .productosYServicios p {
     color: black;
 }
+.productosYServicios h2{
+    color:#17357d;
+}
 
 .productosYServicios {
     width: 100%;
