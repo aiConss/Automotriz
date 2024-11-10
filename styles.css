@@ -2,10 +2,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin: 0;
     background: url('fondoo.jpg') no-repeat center center fixed;
     background-color: #000000;
@@ -13,6 +9,10 @@ body {
     color: #333;
     min-height: 100vh;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .custom-line {
@@ -22,23 +22,24 @@ body {
     margin: 50px 0;
     z-index: 1;
 }
-
 .titulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    margin: 20px 0 0 0;
     padding-left: 0;
     background-color: #4166cc;
     border-radius: 8px;
     padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
 }
 
 .titulo-contenedor {
+    flex: 1; /* Permite que el contenedor del título ocupe todo el espacio disponible */
     text-align: center;
-    width: 65%;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin: 0;
 }
 
 .titulo-contenedor h1 {
@@ -53,8 +54,10 @@ body {
     color: #f0f0f0;
 }
 
+
 .imagen {
     width: 15%;
+    max-width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,14 +76,16 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    max-width: 1200px;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    margin: 0 auto;
 }
+
 .productosYServicios p {
     color: black;
 }
-
 
 .productosYServicios {
     width: 100%;
@@ -91,6 +96,7 @@ body {
     background-color: rgba(184, 184, 184, 0.9);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 0 auto 20px auto;
     margin-bottom: 20px;
     color: #0a58ca; /* Color actualizado */
 }
@@ -101,8 +107,10 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 320px;
+    margin: 0 auto;
 }
-.horariosDeAtencion h2{
+
+.horariosDeAtencion h2 {
     color: black;
 }
 
@@ -151,24 +159,14 @@ h3.active + p {
     text-align: justify;
 }
 
-@media screen and (max-width: 1024px) {
-    .titulo-contenedor {
+/* Estilo específico para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .titulo {
         flex-direction: column;
         align-items: center;
-    }
-
-    .titulo img {
-        width: 100px;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .titulo h1 {
-        font-size: 1.8em;
-    }
-
-    .titulo h3 {
-        font-size: 1em;
+        width: 100%;
+        max-width: none;
+        text-align: center;
     }
 
     .contenedor {
@@ -177,36 +175,54 @@ h3.active + p {
     }
 
     .productosYServicios, .derecha {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .productosYServicios {
         margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .titulo img {
-        width: 90px;
+        padding: 20px;
     }
 
-    .productosYServicios h3 {
-        font-size: 1em;
-    }
-
-    .productosYServicios, .derecha {
+    .derecha {
         margin-bottom: 15px;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .titulo h1 {
-        font-size: 1.5em;
+    .titulo-contenedor {
+        width: 100%;
     }
 
+    .titulo-contenedor h1 {
+        font-size: 1.8em;
+    }
+
+    .titulo-contenedor h3 {
+        font-size: 1.2em;
+    }
+
+    .titulo img {
+        width: 100px;
+        margin-top: 10px;
+    }
+}
+
+/* Estilo adicional para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
     .titulo img {
         width: 75px;
     }
 
-    .productosYServicios, .derecha {
+    .titulo-contenedor h1 {
+        font-size: 1.5em;
+    }
+
+    .titulo-contenedor h3 {
+        font-size: 1em;
+    }
+
+    .productosYServicios {
         margin-bottom: 10px;
+        padding: 10px;
     }
 
     .productosYServicios h3 {
@@ -223,7 +239,6 @@ h3.active + p {
     font-family: 'Poppins', sans-serif;
     margin-top: 20px;
 }
-
 
 footer {
     margin-top: auto;
