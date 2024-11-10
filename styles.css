@@ -50,30 +50,28 @@ h1 {
     font-size: 2em;
     font-weight: 600;
     margin: 0;
-    text-align: center; /* Centra el título */
+    text-align: center;
 }
 
 /* Contenedor para el título, eslogan y la imagen */
 .titulo-contenedor {
     display: flex;
-    justify-content: space-between; /* Deja espacio entre el título y la imagen */
-    align-items: center; /* Alinea el título y la imagen en el centro verticalmente */
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin-bottom: 10px;
 }
 
-/* Estilo para la imagen */
 .titulo img {
     width: 125px;
     height: auto;
-    margin-left: 20px; /* Espacio entre la imagen y el título */
+    margin-left: 20px;
 }
 
-/* Estilo para el eslogan */
 .titulo h3 {
     text-align: center;
     font-size: 1.2em;
-    margin-top: 10px; /* Añade separación con el título */
+    margin-top: 10px;
 }
 
 /* Flexbox container for 3 sections */
@@ -82,12 +80,12 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas */
+    flex-wrap: wrap;
 }
 
 /* Left side section (productosYServicios) */
 .productosYServicios {
-    width: 65%; /* Ocupa el 65% del espacio */
+    width: 65%;
     padding: 15px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -120,7 +118,6 @@ h1 {
     font-weight: bold;
 }
 
-/* Estilo para el enlace de números de teléfono */
 .numerosDeTelefono a:hover {
     color: #00ddff;
 }
@@ -147,15 +144,15 @@ h3.active + p {
 }
 
 .productosYServicios p {
-    display: none; /* Hide paragraphs by default */
+    display: none;
 }
 
 .productosYServicios h3.active + p {
-    display: block; /* Show the paragraph when the h3 is active */
+    display: block;
 }
 
 /* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     /* Apilar el título, eslogan e imagen en pantallas pequeñas */
     .titulo-contenedor {
         flex-direction: column; /* Apila los elementos en pantallas pequeñas */
@@ -164,40 +161,57 @@ h3.active + p {
 
     .titulo img {
         width: 100px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
-        margin-left: 0; /* Elimina el margen izquierdo */
-        margin-top: 10px; /* Añade espacio arriba de la imagen */
+        margin-left: 0;
+        margin-top: 10px;
     }
 
     .titulo h1 {
-        font-size: 1.8em; /* Reduce el tamaño del título en pantallas pequeñas */
+        font-size: 1.8em;
     }
 
     .titulo h3 {
-        font-size: 1em; /* Reduce el tamaño del eslogan */
+        font-size: 1em;
     }
 
-    /* Acomodar el contenido verticalmente en pantallas pequeñas */
     .contenedor {
-        flex-direction: column; /* Apila las secciones verticalmente */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        align-items: center;
     }
 
     .productosYServicios, .derecha {
-        width: 100%; /* Las secciones ocupan el 100% del ancho */
+        width: 100%;
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titulo img {
+        width: 90px; /* Imagen más pequeña */
+    }
+
+    .productosYServicios h3 {
+        font-size: 1em; /* Encabezados más pequeños */
+    }
+
+    .productosYServicios, .derecha {
+        margin-bottom: 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .titulo h1 {
-        font-size: 1.5em; /* Título más pequeño en pantallas muy pequeñas */
+        font-size: 1.5em; /* Título más pequeño */
     }
 
     .titulo img {
-        width: 80px; /* Ajusta el tamaño de la imagen aún más */
+        width: 75px; /* Ajuste en tamaño de la imagen */
+    }
+
+    .productosYServicios, .derecha {
+        margin-bottom: 10px;
     }
 
     .productosYServicios h3 {
-        font-size: 1em; /* Reduce el tamaño de los encabezados de productos y servicios */
+        font-size: 0.9em; /* Más pequeño en pantallas muy pequeñas */
     }
 }
