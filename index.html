@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <script src="toggleContent.js"></script>
 
 <div class="titulo">
@@ -81,6 +80,44 @@
         "Sistemas Automotrices".
     </h3>
 </div>
+
+
+
+<script>
+    function toggleContent(element) {
+        element.classList.toggle("active");
+        const flecha = element.querySelector('.flecha');
+        if (element.classList.contains("active")) {
+            flecha.innerHTML = "&#9660;"; // Flecha hacia abajo
+        } else {
+            flecha.innerHTML = "&#9650;"; // Flecha hacia arriba
+        }
+    }
+</script>
+
+<section class="acercaDeNosotros" onclick="toggleContent(this)">
+    <h2>
+        Acerca de Nosotros 
+        <span class="flecha">&#9650;</span>
+    </h2>
+    <div class="contenido">
+        <p>Misión: <br>
+            Proveer llantas automotrices de alta calidad, durabilidad y seguridad que contribuyan a la movilidad responsable, ofreciendo soluciones que respondan a las necesidades de nuestros clientes y del medio ambiente.
+            <br>
+            Visión: <br>
+            Ser reconocidos como líderes en el mercado automotriz nacional, destacándonos por la innovación, el compromiso con el medio ambiente y la satisfacción total del cliente.
+            Reflexión Estratégica
+            Michelinos busca posicionarse como una marca confiable y reconocida en el mercado de llantas en México. La estrategia se centra en productos de alta calidad, servicios personalizados y prácticas sustentables.
+            Existen grandes marcas, por lo que diferenciarse mediante calidad y servicios es esencial.
+            Cumplimiento con las normas NOM-086-SEMARNAT-SCFI-2019 (para el control de emisiones de contaminantes) y la NOM-142-SCFI-2000, que regula especificaciones para llantas y materiales automotrices.
+            La demanda de llantas de bajo impacto ambiental está en aumento, lo que ofrece una oportunidad para destacar
+            Claridad y Concisión
+            Michelinos se compromete a ofrecer productos de alta calidad, seguros y ecológicos, cumpliendo con las normas vigentes y las expectativas del cliente. Los objetivos son claros: satisfacer necesidades de transporte seguro y ecológico, cumpliendo estrictamente con la normativa mexicana en el sector automotriz.</p>
+    </div>
+</section>
+
+
+
 
 </body>
 </html>
