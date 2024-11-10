@@ -5,13 +5,15 @@ body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: space-between; 
     align-items: center;
-    margin: 10px;
+    margin: 0;
     background: url('fondo.jpg') no-repeat center center fixed;
     background-color: #000000;
     background-size: cover;
     color: #333;
+    min-height: 100vh;
+    padding: 0 20px; /* Márgenes de 20px a la izquierda y derecha para todo el cuerpo */
 }
 
 .custom-line {
@@ -22,56 +24,50 @@ body {
     z-index: 1;
 }
 
-/* Headings */
-h1 {
-    color: #071c57;
+/* Titulo y Eslogan */
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding-left: 0; /* El bloque de título estará pegado a la izquierda */
+    background-color: #071c57; /* Fondo sólido para el título */
+    border-radius: 8px; /* Bordes redondeados al bloque del título */
+    padding: 20px; /* Espaciado dentro del bloque del título */
+}
+
+.titulo-contenedor {
+    text-align: center;
+    width: 65%;
+}
+
+.titulo-contenedor h1 {
+    color: #ffffff; /* Título en blanco para resaltar */
     font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* Container Styles */
-.titulo {
+.titulo-contenedor h3 {
+    font-size: 1.5em;
+    color: #f0f0f0; /* Eslogan con un color más claro */
+}
+
+.imagen {
+    width: 15%;
     display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
     justify-content: center;
-    align-items: center; /* Centra todos los elementos horizontalmente */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #b7b7b7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 800px;
-}
-
-/* Título */
-.titulo h1 {
-    color: #000000;
-    font-size: 2em;
-    font-weight: 600;
-    margin: 0;
-    text-align: center;
-}
-
-/* Contenedor para el título, eslogan y la imagen */
-.titulo-contenedor {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
 }
 
-.titulo img {
-    width: 125px;
-    height: auto;
-    margin-left: 20px;
-}
-
-.titulo h3 {
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 10px;
+.circle-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #071c57; /* Color de la circunferencia igual al fondo del título */
 }
 
 /* Flexbox container for 3 sections */
@@ -81,16 +77,21 @@ h1 {
     align-items: flex-start;
     width: 100%;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 /* Left side section (productosYServicios) */
 .productosYServicios {
-    width: 65%;
+    width: 100%;
+    max-width: 600px;
     padding: 15px;
+    border: 2px solid #071c57; /* Borde respetado */
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Right side section (horariosDeAtencion, numerosDeTelefono) */
@@ -98,12 +99,14 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30%;
+    width: 100%;
+    max-width: 320px;
 }
 
 /* Horarios de atención */
 .horariosDeAtencion, .numerosDeTelefono {
     padding: 15px;
+    border: 2px solid #071c57; /* Borde respetado */
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -120,12 +123,6 @@ h1 {
 
 .numerosDeTelefono a:hover {
     color: #00ddff;
-}
-
-/* Circle image */
-.circle-image {
-    border-radius: 50%;
-    object-fit: cover;
 }
 
 /* Make sure the link and interaction works for toggleContent */
@@ -216,7 +213,6 @@ h3.active + p {
     }
 }
 
-
 .creditos {
     text-align: center; /* Centra el texto */
     padding: 10px; /* Añade un poco de espacio alrededor del texto */
@@ -228,12 +224,6 @@ h3.active + p {
 }
 
 /* Para asegurarte que los créditos solo se vean al final */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
-}
-
 footer {
     margin-top: auto; /* Empuja el footer hacia el final de la página */
 }
