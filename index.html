@@ -1,89 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Automotriz-Wiki</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotriz-Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
 
+<script src="toggleContent.js"></script>
 
-    <body>
-    
-    <script src="toggleContent.js"></script>
-    
-    <div class="titulo">
-        <!-- Contenedor para el título y la imagen -->
-        <div class="titulo-contenedor">
-            <h1>Michelinos</h1>
-               <h3>"Seguridad en cada Giro"</h3>
-        </div>
-        <div class="imagen">
-            <img src="logo.jpg" alt="Michelinos" class="circle-image">
-        </div>
-        <!-- Eslogan debajo del título e imagen -->
+<div class="titulo">
+    <div class="titulo-contenedor">
+        <h1>Michelinos</h1>
+        <h3>"Seguridad en cada Giro"</h3>
     </div>
-    
-    
-    <hr class="custom-line">
-    
-    <div class="contenedor">
-        <div class="productosYServicios">
-            <h1>Productos y Servicios</h1>
-            
-            <h2>Productos</h2>
-            <h3 onclick="toggleContent(this)">Llantas Nuevas y Usadas</h3>
-            <p>Amplia selección de llantas para todo tipo de vehículos.</p>
-            
-            <h3 onclick="toggleContent(this)">Accesorios para Llantas</h3>
-            <p>Tapones, válvulas, y otros accesorios esenciales para tus llantas.</p>
-            <br><br><br><br>
-            
-            <h2>Servicios</h2>
-            <h3 onclick="toggleContent(this)">Cambio de Llantas</h3>
-            <p>Instalación y cambio de llantas con ajuste seguro y preciso.</p>
-            
-            <h3 onclick="toggleContent(this)">Balanceo de Llantas</h3>
-            <p>Balanceo electrónico para una conducción suave.</p>
-            
-            <h3 onclick="toggleContent(this)">Alineación de Dirección</h3>
-            <p>Alineación para mejorar el manejo y la vida útil de las llantas.</p>
-            
-            <h3 onclick="toggleContent(this)">Reparación de Llantas</h3>
-            <p>Reparación de llantas para pinchazos y otros daños menores.</p>
-            
-            <h3 onclick="toggleContent(this)">Revisión de Presión</h3>
-            <p>Ajuste de la presión de las llantas para seguridad y eficiencia.</p>
-            
-            <h3 onclick="toggleContent(this)">Rotación de Llantas</h3>
-            <p>Rotación para asegurar un desgaste uniforme de las llantas.</p>
-        </div>
+    <div class="imagen">
+        <img src="logo.jpg" alt="Michelinos" class="circle-image">
+    </div>
+</div>
+
+<hr class="custom-line">
+
+<div class="contenedor">
+    <div class="productosYServicios">
+        <h1>Productos y Servicios</h1>
         
-        <div class="derecha">
-            <div class="horariosDeAtencion">
-                <h1>Horarios de atención</h1>
-                <h2>Lunes a viernes:   <br> 9:00 am - 6:00 pm</h2>
-                <h2>Sábado:<br> 9:00 AM - 4:00 PM</h2>
-                <h2>Domingo:<br> Cerrado</h2>
-            </div>
+        <h2>Productos</h2>
+        <h3 onclick="toggleContent(this)">Llantas Nuevas y Usadas</h3>
+        <p>Amplia selección de llantas para todo tipo de vehículos.</p>
         
-            <div class="numerosDeTelefono">
-                <h1>¡ Ponte en contacto con nosotros !</h1>
-                <h2><a href="tel:+525624829478">+52 5624829478</a></h2>
-            </div>
+        <h3 onclick="toggleContent(this)">Accesorios para Llantas</h3>
+        <p>Tapones, válvulas, y otros accesorios esenciales para tus llantas.</p>
+        
+        <h2>Servicios</h2>
+        <h3 onclick="toggleContent(this)">Cambio de Llantas</h3>
+        <p>Instalación y cambio de llantas con ajuste seguro y preciso.</p>
+        
+        <h3 onclick="toggleContent(this)">Balanceo de Llantas</h3>
+        <p>Balanceo electrónico para una conducción suave.</p>
+        
+        <h3 onclick="toggleContent(this)">Alineación de Dirección</h3>
+        <p>Alineación para mejorar el manejo y la vida útil de las llantas.</p>
+        
+        <h3 onclick="toggleContent(this)">Reparación de Llantas</h3>
+        <p>Reparación de llantas para pinchazos y otros daños menores.</p>
+        
+        <h3 onclick="toggleContent(this)">Revisión de Presión</h3>
+        <p>Ajuste de la presión de las llantas para seguridad y eficiencia.</p>
+        
+        <h3 onclick="toggleContent(this)">Rotación de Llantas</h3>
+        <p>Rotación para asegurar un desgaste uniforme de las llantas.</p>
+    </div>
+    
+    <div class="derecha">
+        <div class="horariosDeAtencion">
+            <h1>Horarios de atención</h1>
+            <h2>Lunes a viernes: <br> 9:00 am - 6:00 pm</h2>
+            <h2>Sábado:<br> 9:00 AM - 4:00 PM</h2>
+            <h2>Domingo:<br> Cerrado</h2>
+        </div>
+    
+        <div class="numerosDeTelefono">
+            <h1>¡ Ponte en contacto con nosotros !</h1>
+            <h2><a href="tel:+525624829478">+52 5624829478</a></h2>
         </div>
     </div>
-    <div class="creditos">
-        <h3>Empresa diseñada por alumnos del Centro de Estudios Científicos y Tecnológicos
-            No.3 Estanislao Ramirez Ruiz, pertenecientes al grupo 3IM16, de la carrera de 
-            "Sistemas Automotrices ".
-        </h3>
+</div>
+<div class="creditos">
+    <h3>Empresa diseñada por alumnos del Centro de Estudios Científicos y Tecnológicos
+        No.3 Estanislao Ramirez Ruiz, pertenecientes al grupo 3IM16, de la carrera de 
+        "Sistemas Automotrices".
+    </h3>
+</div>
 
-
-
-
-    </div>
-
-    </body>
+</body>
 </html>
