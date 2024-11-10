@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     background: url('fondo.jpg') no-repeat center center fixed;
@@ -13,7 +12,7 @@ body {
     background-size: cover;
     color: #333;
     min-height: 100vh;
-    padding: 0 20px; /* Márgenes de 20px a la izquierda y derecha para todo el cuerpo */
+    padding: 0 20px;
 }
 
 .custom-line {
@@ -24,7 +23,6 @@ body {
     z-index: 1;
 }
 
-/* Titulo y Eslogan */
 .titulo {
     display: flex;
     justify-content: space-between;
@@ -32,10 +30,10 @@ body {
     width: 100%;
     flex-wrap: wrap;
     margin: 20px 0;
-    padding-left: 0; /* El bloque de título estará pegado a la izquierda */
-    background-color: #071c57; /* Fondo sólido para el título */
-    border-radius: 8px; /* Bordes redondeados al bloque del título */
-    padding: 20px; /* Espaciado dentro del bloque del título */
+    padding-left: 0;
+    background-color: #071c57;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .titulo-contenedor {
@@ -44,7 +42,7 @@ body {
 }
 
 .titulo-contenedor h1 {
-    color: #ffffff; /* Título en blanco para resaltar */
+    color: #ffffff;
     font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 10px;
@@ -52,7 +50,7 @@ body {
 
 .titulo-contenedor h3 {
     font-size: 1.5em;
-    color: #f0f0f0; /* Eslogan con un color más claro */
+    color: #f0f0f0;
 }
 
 .imagen {
@@ -67,10 +65,9 @@ body {
     object-fit: cover;
     width: 100px;
     height: 100px;
-    border: 5px solid #071c57; /* Color de la circunferencia igual al fondo del título */
+    border: 5px solid #071c57;
 }
 
-/* Flexbox container for 3 sections */
 .contenedor {
     display: flex;
     justify-content: space-between;
@@ -81,20 +78,19 @@ body {
     padding: 20px;
 }
 
-/* Left side section (productosYServicios) */
 .productosYServicios {
     width: 100%;
     max-width: 600px;
     padding: 15px;
-    border: 2px solid #071c57; /* Borde respetado */
+    border: 2px solid #071c57;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
+    color: #0a58ca; /* Color actualizado */
 }
 
-/* Right side section (horariosDeAtencion, numerosDeTelefono) */
 .derecha {
     display: flex;
     flex-direction: column;
@@ -103,18 +99,17 @@ body {
     max-width: 320px;
 }
 
-/* Horarios de atención */
 .horariosDeAtencion, .numerosDeTelefono {
     padding: 15px;
-    border: 2px solid #071c57; /* Borde respetado */
+    border: 2px solid #071c57;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     text-align: center;
+    color: #0a58ca; /* Color actualizado */
 }
 
-/* Link styling for better visibility */
 .numerosDeTelefono a {
     color: #000000;
     text-decoration: none;
@@ -125,7 +120,6 @@ body {
     color: #00ddff;
 }
 
-/* Make sure the link and interaction works for toggleContent */
 .productosYServicios h3 {
     cursor: pointer;
     background-color: #f0f0f0;
@@ -148,16 +142,14 @@ h3.active + p {
     display: block;
 }
 
-/* Responsive Design for Mobile */
 @media screen and (max-width: 1024px) {
-    /* Apilar el título, eslogan e imagen en pantallas pequeñas */
     .titulo-contenedor {
-        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        align-items: center;
     }
 
     .titulo img {
-        width: 100px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        width: 100px;
         margin-left: 0;
         margin-top: 10px;
     }
@@ -183,11 +175,11 @@ h3.active + p {
 
 @media screen and (max-width: 768px) {
     .titulo img {
-        width: 90px; /* Imagen más pequeña */
+        width: 90px;
     }
 
     .productosYServicios h3 {
-        font-size: 1em; /* Encabezados más pequeños */
+        font-size: 1em;
     }
 
     .productosYServicios, .derecha {
@@ -197,11 +189,11 @@ h3.active + p {
 
 @media screen and (max-width: 480px) {
     .titulo h1 {
-        font-size: 1.5em; /* Título más pequeño */
+        font-size: 1.5em;
     }
 
     .titulo img {
-        width: 75px; /* Ajuste en tamaño de la imagen */
+        width: 75px;
     }
 
     .productosYServicios, .derecha {
@@ -209,21 +201,20 @@ h3.active + p {
     }
 
     .productosYServicios h3 {
-        font-size: 0.9em; /* Más pequeño en pantallas muy pequeñas */
+        font-size: 0.9em;
     }
 }
 
 .creditos {
-    text-align: center; /* Centra el texto */
-    padding: 10px; /* Añade un poco de espacio alrededor del texto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con algo de transparencia */
-    color: white; /* Color del texto */
-    font-size: 0.9em; /* Tamaño del texto más pequeño */
-    font-family: 'Poppins', sans-serif; /* Asegúrate de usar la misma fuente que el resto */
-    margin-top: 20px; /* Añade algo de margen en la parte superior para que no esté pegado al contenido */
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.9em;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
 }
 
-/* Para asegurarte que los créditos solo se vean al final */
 footer {
-    margin-top: auto; /* Empuja el footer hacia el final de la página */
+    margin-top: auto;
 }
