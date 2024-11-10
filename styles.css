@@ -26,19 +26,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    width: 100vw;
     margin: 20px 0 0 0;
     padding-left: 0;
     background-color: #4166cc;
     border-radius: 8px;
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+    box-sizing: border-box;
 }
 
 .titulo-contenedor {
-    flex: 1; /* Permite que el contenedor del título ocupe todo el espacio disponible */
+    flex: 1;
     text-align: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    width: 100%; 
     margin: 0;
 }
 
@@ -89,7 +89,6 @@ body {
 .productosYServicios h2{
     color:#17357d;
 }
-
 .productosYServicios {
     width: 100%;
     max-width: 600px;
@@ -101,8 +100,10 @@ body {
     text-align: center;
     margin: 0 auto 20px auto;
     margin-bottom: 20px;
-    color: #0a58ca; /* Color actualizado */
+    color: #0a58ca; 
+    cursor: pointer;
 }
+
 
 .derecha {
     display: flex;
@@ -243,6 +244,67 @@ h3.active + p {
     margin-top: 20px;
 }
 
+
 footer {
     margin-top: auto;
+}
+.acercaDeNosotros {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px;
+    cursor: pointer;  /* Indica que es clicable */
+    text-align: left; /* Alinea todo el contenido a la izquierda */
+    border: 1px solid #000; /* Bordes negros para un look más formal */
+    margin: 20px 0; /* Margen para separar de otros contenidos */
+    width: 100vw; /* Asegura que ocupe todo el ancho de la ventana */
+    max-width: none; /* Elimina cualquier límite de ancho */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+}
+
+.acercaDeNosotros h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acercaDeNosotros .contenido {
+    max-height: 0; /* Ocultamos el contenido por defecto */
+    opacity: 0; /* Para la animación de desvanecimiento */
+    overflow: hidden; /* Oculta el contenido que excede el límite */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Animación suave */
+}
+
+.acercaDeNosotros.active .contenido {
+    max-height: 500px; /* Establecemos una altura máxima */
+    opacity: 1; /* Para la animación de desvanecimiento */
+}
+
+.acercaDeNosotros .contenido p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.acercaDeNosotros .flecha {
+    transition: transform 0.3s;
+}
+
+.acercaDeNosotros.active .flecha {
+    transform: rotate(180deg); /* Rotar la flecha hacia arriba */
+}
+
+/* Estilo específico para dispositivos móviles */
+@media (max-width: 768px) {
+    .acercaDeNosotros {
+        padding: 20px 10px;
+    }
+
+    .acercaDeNosotros h2 {
+        font-size: 1.5em;
+    }
+
+    .acercaDeNosotros .contenido p {
+        font-size: 0.9em;
+    }
 }
